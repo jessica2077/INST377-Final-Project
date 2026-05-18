@@ -2,7 +2,7 @@
 
 ## Developer: Jessica Ononye
 ### Vercel Deployment Link: 
-### GitHub Repository
+### GitHub Repository: git@github.com:jessica2077/INST377-Final-Project.git
 
 This application uses:
 

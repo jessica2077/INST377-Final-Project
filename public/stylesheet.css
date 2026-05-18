@@ -124,12 +124,7 @@ select {
     line-height: 1.5;
     min-height: 60px;
 }
-  
-.history-layout {
-    display: grid;
-    gap: 30px;
-}
-  
+
 .chartBox {
     position: relative;
     height: 300px; 
@@ -138,51 +133,11 @@ select {
     border-radius: 8px;
 }
   
-.history-grid-container {
-    display: grid;
-    grid-template-columns: 1fr; 
-    gap: 15px;
-    margin-top: 15px;
-}
-  
 .history-card {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    border: 1px solid #e0e6ed;
 }
-  
-.card-meta {
-    margin-bottom: 10px;
-}
-  
-.lang-tag {
-    background-color: #e8f0fe;
-    color: #1a73e8;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-  
-.text-original {
-    color: #666;
-    margin: 5px 0;
-    font-size: 14px;
-}
-  
-.text-translated {
-    color: #111;
-    margin: 5px 0;
-    font-size: 16px;
-}
-  
-.loading-state, .error-state, .no-records {
-    text-align: center;
-    padding: 30px;
-    color: #868e96;
-}
+
 
   

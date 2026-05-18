@@ -3,7 +3,6 @@ const express = require("express");
 const cors = require("cors");
 const fetch = require("node-fetch");
 const { createClient } = require("@supabase/supabase-js");
-
 const app = express();
 
 app.use(cors());
@@ -11,20 +10,31 @@ app.use(express.json());
 app.use(express.static("public"));
 
 const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_ANON_KEY || process.env.SUPABASE_KEY;
+const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 app.get("/languages", async (req, res) => {
-  try {
-    const response = await fetch("https://translate.argosopentech.com/languages");
-    const data = await response.json();
-    res.json(data);
-  } catch (error) {
-    res.status(500).json({ error: "Failed to fetch language!" });
-  }
-});
-
-
+    try {
+      const response = await fetch("https://translate.argosopentech.com/languages");
+      if (!response.ok) throw new Error("Unavailable");
+      const data = await response.json();
+      res.json(data);
+    } catch (error) {
+      console.warn("API mirror offline.");
+      res.json([
+        { code: "en", name: "English" },
+        { code: "es", name: "Spanish" },
+        { code: "fr", name: "French" },
+        { code: "de", name: "German" },
+        { code: "it", name: "Italian" },
+        { code: "pt", name: "Portuguese" },
+        { code: "zh", name: "Chinese" },
+        { code: "ja", name: "Japanese" },
+        { code: "ko", name: "Korean" },
+        { code: "ar", name: "Arabic" }
+      ]);
+    }
+  });
 app.get("/translate", async (req, res) => {
   try {
     const { q, langpair } = req.query;
