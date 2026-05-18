@@ -24,9 +24,6 @@
         "dest": "server/server.js"
       },
       {
-        "handle": "filesystem"
-      },
-      {
         "src": "/(.*)",
         "dest": "public/$1"
       }
