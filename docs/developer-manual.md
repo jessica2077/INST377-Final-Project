@@ -1,7 +1,7 @@
 # To&From is a translate application designed to reduce communication barriers in classrooms, workplaces, healthcare settings, and multilingual communities.
 
 ## Developer: Jessica Ononye
-### Vercel Deployment Link: 
+### Vercel Deployment Link: https://vercel.com/jessica2077s-projects/inst-377-final-project/5zH8YktFi2Jo12D6UcnfVmZyCuqW
 ### GitHub Repository: git@github.com:jessica2077/INST377-Final-Project.git
 
 This application uses:
