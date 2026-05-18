@@ -8,6 +8,10 @@
     ],
     "routes": [
       {
+        "src": "/",
+        "dest": "server/server.js"
+      },
+      {
         "src": "/languages",
         "dest": "server/server.js"
       },
