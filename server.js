@@ -3,13 +3,13 @@ const express = require("express");
 const cors = require("cors");
 const fetch = require("node-fetch");
 const { createClient } = require("@supabase/supabase-js");
-const express = require("express");
+
 const path = require("path")
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "../public")))
+app.use(express.static((__dirname)))
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
