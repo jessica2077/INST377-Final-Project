@@ -2,30 +2,30 @@
     "version": 2,
     "builds": [
       {
-        "src": "server.js",
+        "src": "server/server.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
         "src": "/languages",
-        "dest": "server.js"
+        "dest": "server/server.js"
       },
       {
         "src": "/translate",
-        "dest": "server.js"
+        "dest": "server/server.js"
       },
       {
         "src": "/saveTranslation",
-        "dest": "server.js"
+        "dest": "server/server.js"
       },
       {
         "src": "/history",
-        "dest": "server.js"
+        "dest": "server/server.js"
       },
       {
         "src": "/(.*)",
-        "dest": "/$1"
+        "dest": "/public/$1"
       }
     ]
   }
