@@ -1,0 +1,41 @@
+<html>
+<head> 
+    <title>TO&FROM</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <nav class="navigationBar">
+        <h2 class="navHead">To&FROM</h2>
+        <div class="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="history.html">History</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1>Translate Text</h1>
+        <div class="translationBox">
+            <textarea id="textInput" placeholder="Enter text to translate"></textarea>
+        </div>
+        <div class="controls">
+            <select id="sourceLanguage">
+                <option value="" disabled selected>Detect Language</option>
+            </select>
+            <span class="arrow">➔</span>
+            
+            <select id="targetLanguage">
+                <option value="" disabled selected>Translate To</option>
+            </select>
+        </div>
+
+        <div class="buttons">
+            <button id="translateButton" class="button-74" role="button">Translate</button>
+            <button id="saveButton" class="button-74" role="button">Save Translation</button>
+        </div>
+        <div id="result" class="output">
+        </div>
+    </main>
+    <script src="homepage.js"></script>
+</body>
+</html>

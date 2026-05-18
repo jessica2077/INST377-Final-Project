@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Translation History | TO&FROM</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navigationBar">
+        <h2 class="navHead">To&FROM</h2>
+        <div class="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="history.html">History</a>
+        </div>
+    </nav>
+    <main class="historyPage">
+        <h1><i class="fa-solid fa-clock-rotate-left"></i> Saved Translations Log</h1>
+        <p>Review your saved records and translation usage!</p>
+
+        <h2><i class="fa-solid fa-chart-pie"></i> Language Distribution</h2>
+        <p>A breakdown of your targeted translation destination choices:</p>
+        <div class="chartBox">
+             <canvas id="analyticsChart"></canvas>
+        </div>
+        
+        <h2><i class="fa-solid fa-database"></i> Database History Records</h2>
+        <p>Your saved translations:</p>
+        <div id="historyLog">
+            <i class="fa-solid fa-spinner fa-spin"></i> Fetching from Supabase
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="historypage.js"></script>
+</body>
+</html>
